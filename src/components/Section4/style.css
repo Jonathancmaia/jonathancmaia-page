@@ -1,0 +1,52 @@
+#section4 > div {
+    position: relative;
+}
+
+#section4 > div > .loading {
+    font-size: 8rem;
+    display: absolute;
+    animation: loadingAnimate 2s ease-in-out infinite;
+}
+
+#section4 > div > .projectsHandler {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#section4 > div > .projectsHandler > .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 30%;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 1) 0px 30px 60px -12px inset;;
+    margin: 0.5rem;
+    overflow: hidden;
+}
+
+#section4 > div > .projectsHandler > .project > img {
+    max-height: 20rem;
+    z-index: -1;
+}
+
+#section4 > div > .projectsHandler > .project > *:not(img) {
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+@keyframes loadingAnimate {
+    0% {
+        top: 0;
+    } 50% {
+        top: 2rem;
+    } 100% {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 538px){
+    #section4 > div > .projectsHandler > .project {
+        flex-basis: 100%;
+    }
+}

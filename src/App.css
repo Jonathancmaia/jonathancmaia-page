@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  font-family: 'Geologica', sans-serif;
+  --base-color: #1A1A27;
+  background-color: var(--base-color);
+  color: #FFF;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section {
+  padding: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* RGB ANIMATIONS */
+
+.rgb, .rgb-active{
+  position: relative;
+  -webkit-background-clip: text;
+  animation: rgbMoviment 5s linear infinite;
+  background-size: 300% auto;
+  transition: 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.rgb:hover, .rgb-active {
+  color: rgb(255,255,255,0);
+  transition: 1s;
 }
 
-@keyframes App-logo-spin {
+.rgb::after, .rgb-active::after{
+  content: attr(data);
+  filter: blur(1.0em);
+  position: absolute;
+  left: 0;
+  background-size: 300% auto;
+  animation: rgbMoviment 5s linear infinite;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.rgb:hover::after, .rgb-active::after{
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+@keyframes rgbMoviment {
   from {
-    transform: rotate(0deg);
+    background-image: linear-gradient(to right, blue 0%, green 25%, red 50%, green 75%, blue 100%);
+    background-position: 300% 0;
   }
   to {
-    transform: rotate(360deg);
+    background-image: linear-gradient(to right, blue 0%, green 25%, red 50%, green 75%, blue 100%);
+    background-position: 0 0;
   }
 }

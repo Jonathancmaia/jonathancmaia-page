@@ -1,0 +1,40 @@
+#section3 > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#section3 > div > i {
+    font-size: 4rem;
+    cursor: pointer;
+    flex-basis: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+#section3 > div > div {
+    font-size: 8rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-basis: 80%;
+    padding: 2rem 0rem 2rem 0rem;
+    box-shadow: rgba(0, 0, 0, 1) 0px 30px 60px -12px inset;
+    border-radius: 2rem;
+    cursor: grab;
+}
+
+#section3 > div > div > div {
+    margin: 0rem 2rem 0rem 2rem;
+    z-index: 0;
+}
+
+@media screen and (max-width: 768px){
+    #section3 > div > i {
+        display: none;
+    }
+
+    #section3 > div > div {
+        flex-basis: 100%;
+    }
+}

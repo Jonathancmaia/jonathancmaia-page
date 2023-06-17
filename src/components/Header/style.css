@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+header > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header > ul > li {
+    list-style: none;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+}
+
+header > ul > li, header > h2 {
+    cursor: pointer;
+}
