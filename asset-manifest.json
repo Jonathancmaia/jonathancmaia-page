@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jonathancmaia-page/static/css/main.8b8621dc.css",
+    "main.js": "/jonathancmaia-page/static/js/main.f0240773.js",
+    "static/js/787.e341f0a2.chunk.js": "/jonathancmaia-page/static/js/787.e341f0a2.chunk.js",
+    "index.html": "/jonathancmaia-page/index.html",
+    "main.8b8621dc.css.map": "/jonathancmaia-page/static/css/main.8b8621dc.css.map",
+    "main.f0240773.js.map": "/jonathancmaia-page/static/js/main.f0240773.js.map",
+    "787.e341f0a2.chunk.js.map": "/jonathancmaia-page/static/js/787.e341f0a2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b8621dc.css",
+    "static/js/main.f0240773.js"
+  ]
+}
