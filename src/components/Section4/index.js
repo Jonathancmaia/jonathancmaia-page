@@ -29,7 +29,7 @@ const Section4 = () => {
                                             } alt={p.name} />
                                             <h2>
                                                 <a href={"https://github.com/"+p.full_name} target="_blank" rel="noreferrer" className="rgb" data={p.name+' * '}>
-                                                    {p.name} <i class="bi bi-box-arrow-up-right"></i>
+                                                    {p.name} <i className="bi bi-box-arrow-up-right"></i>
                                                 </a>
                                             </h2>
                                             <p>{p.description}</p>

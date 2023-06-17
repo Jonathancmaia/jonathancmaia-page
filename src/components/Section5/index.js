@@ -18,7 +18,7 @@ const Section5 = () => {
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                    <i class="bi bi-linkedin rgb" data="***"></i>
+                    <i className="bi bi-linkedin rgb" data="***"></i>
                     <div>
                         <h4>
                             Linkedin
@@ -33,7 +33,7 @@ const Section5 = () => {
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                    <i class="bi bi-github rgb" data="***"></i>
+                    <i className="bi bi-github rgb" data="***"></i>
                     <div>
                         <h4>
                             GitHub
@@ -48,7 +48,7 @@ const Section5 = () => {
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                    <i class="bi bi-whatsapp rgb" data="***"></i>
+                    <i className="bi bi-whatsapp rgb" data="***"></i>
                     <div>
                         <h4>
                             WhatsApp
@@ -63,7 +63,7 @@ const Section5 = () => {
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                    <i class="bi bi-envelope-at rgb" data="***"></i>
+                    <i className="bi bi-envelope-at rgb" data="***"></i>
                     <div>
                         <h4>
                             E-mail
@@ -78,7 +78,7 @@ const Section5 = () => {
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                    <i class="bi bi-phone rgb" data="***"></i>
+                    <i className="bi bi-phone rgb" data="***"></i>
                     <div>
                         <h4>
                             Telefone
