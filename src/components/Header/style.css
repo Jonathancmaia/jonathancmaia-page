@@ -1,27 +1,86 @@
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 6rem;
-    top: 0;
-    background-color: rgba(0,0,0,0.4);
-    z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 header > ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 header > ul > li {
-    list-style: none;
-    margin: 0rem 0.5rem 0rem 0.5rem;
+  list-style: none;
+  margin: 0rem 0.5rem 0rem 0.5rem;
 }
 
-header > ul > li, header > h2 {
-    cursor: pointer;
+header > ul > li,
+header > h2 {
+  cursor: pointer;
+}
+
+header > .collapse-button {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  header > .collapse-button {
+    display: flex;
+    margin-right: 2rem;
+    font-size: 180%;
+  }
+
+  header > ul {
+    position: absolute;
+    flex-direction: column;
+    top: 5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 0%;
+  }
+
+  header > .inactive {
+    animation: contract 0.5s;
+    height: 0%;
+  }
+
+  header > .active {
+    animation: expand 0.5s;
+    height: 150%;
+  }
+
+  header > ul > li {
+    font-weight: 600;
+    font-size: 125%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    overflow: hidden;
+  }
+
+  @keyframes expand {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 150%;
+    }
+  }
+  @keyframes contract {
+    from {
+      height: 150%;
+    }
+
+    to {
+      height: 0%;
+    }
+  }
 }
