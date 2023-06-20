@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jonathancmaia-page/static/css/main.739263e6.css",
-    "main.js": "/jonathancmaia-page/static/js/main.dd596264.js",
+    "main.css": "/jonathancmaia-page/static/css/main.b419df24.css",
+    "main.js": "/jonathancmaia-page/static/js/main.c03173b4.js",
     "static/js/787.e341f0a2.chunk.js": "/jonathancmaia-page/static/js/787.e341f0a2.chunk.js",
     "index.html": "/jonathancmaia-page/index.html",
-    "main.739263e6.css.map": "/jonathancmaia-page/static/css/main.739263e6.css.map",
-    "main.dd596264.js.map": "/jonathancmaia-page/static/js/main.dd596264.js.map",
+    "main.b419df24.css.map": "/jonathancmaia-page/static/css/main.b419df24.css.map",
+    "main.c03173b4.js.map": "/jonathancmaia-page/static/js/main.c03173b4.js.map",
     "787.e341f0a2.chunk.js.map": "/jonathancmaia-page/static/js/787.e341f0a2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.739263e6.css",
-    "static/js/main.dd596264.js"
+    "static/css/main.b419df24.css",
+    "static/js/main.c03173b4.js"
   ]
 }
