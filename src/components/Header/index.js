@@ -1,7 +1,5 @@
 import "./style.css";
 const Header = () => {
-  const navbar = document.getElementById("collapse-navbar");
-
   //Function where do link function to navbar items
   const handleClick = (e) => {
     window.scrollTo({
@@ -13,6 +11,7 @@ const Header = () => {
 
   //Function where expands ans contracts navbar
   const handleExpand = () => {
+    const navbar = document.getElementById("collapse-navbar");
     if (navbar.classList.contains("active")) {
       navbar.classList.remove("active");
       navbar.classList.add("inactive");
@@ -24,6 +23,7 @@ const Header = () => {
 
   //Reset navbar status on resize
   window.addEventListener("resize", function () {
+    const navbar = document.getElementById("collapse-navbar");
     if (window.innerWidth < 576) {
       if (navbar.classList.contains("active")) {
         navbar.classList.remove("active");

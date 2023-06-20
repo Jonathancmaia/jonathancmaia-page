@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-:root{
-  font-family: 'Geologica', sans-serif;
-  --base-color: #1A1A27;
+:root {
+  font-family: "Geologica", sans-serif;
+  --base-color: #1a1a27;
   background-color: var(--base-color);
-  color: #FFF;
+  color: #fff;
   overflow-x: hidden;
 }
 
@@ -19,7 +19,8 @@ section {
 
 /* RGB ANIMATIONS */
 
-.rgb, .rgb-active{
+.rgb,
+.rgb-active {
   position: relative;
   -webkit-background-clip: text;
   animation: rgbMoviment 5s linear infinite;
@@ -27,14 +28,16 @@ section {
   transition: 0.5s;
 }
 
-.rgb:hover, .rgb-active {
-  color: rgb(255,255,255,0);
+.rgb:hover,
+.rgb-active {
+  color: rgb(255, 255, 255, 0);
   transition: 1s;
 }
 
-.rgb::after, .rgb-active::after{
+.rgb::after,
+.rgb-active::after {
   content: attr(data);
-  filter: blur(1.0em);
+  filter: blur(1em);
   position: absolute;
   left: 0;
   background-size: 300% auto;
@@ -43,18 +46,33 @@ section {
   transition: 0.5s;
 }
 
-.rgb:hover::after, .rgb-active::after{
+.rgb:hover::after,
+.rgb-active::after {
   opacity: 0.5;
   transition: 0.4s;
 }
 
 @keyframes rgbMoviment {
   from {
-    background-image: linear-gradient(to right, blue 0%, green 25%, red 50%, green 75%, blue 100%);
+    background-image: linear-gradient(
+      to right,
+      blue 0%,
+      green 25%,
+      red 50%,
+      green 75%,
+      blue 100%
+    );
     background-position: 300% 0;
   }
   to {
-    background-image: linear-gradient(to right, blue 0%, green 25%, red 50%, green 75%, blue 100%);
+    background-image: linear-gradient(
+      to right,
+      blue 0%,
+      green 25%,
+      red 50%,
+      green 75%,
+      blue 100%
+    );
     background-position: 0 0;
   }
 }

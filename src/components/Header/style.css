@@ -36,6 +36,11 @@ header > .collapse-button {
     display: flex;
     margin-right: 2rem;
     font-size: 180%;
+    font-size: 8vw;
+  }
+
+  header > h2 {
+    font-size: 8vw;
   }
 
   header > ul {
