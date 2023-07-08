@@ -26,6 +26,10 @@
     overflow: hidden;
 }
 
+#section4 > div > .projectsHandler > .project > h2 > a {
+    display: block;
+}
+
 #section4 > div > .projectsHandler > .project > img {
     max-height: 20rem;
     z-index: -1;

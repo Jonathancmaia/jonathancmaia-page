@@ -5,7 +5,7 @@
     justify-content: space-around;
 }
 
-#section5 > div > div {
+#section5 > div > a >  div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,21 +13,21 @@
     padding: 1rem;
 }
 
-#section5 > div > div > div {
+#section5 > div > a > div > div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#section5 > div > div > div > h4 {
+#section5 > div > a > div > div > h4 {
     font-size: 1.2rem;
 }
 
-#section5 > div > div > div > p {
+#section5 > div > a > div > div > p {
     font-size: 0.8rem;
     text-align: center;
 }
 
-#section5 > div > div > i {
+#section5 > div > a > div > i {
     font-size: 6rem;
 }
