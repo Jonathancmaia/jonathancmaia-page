@@ -3,12 +3,26 @@ import './style.css';
 
 const Section4 = () => {
     const [response, setResponse] = useState(false);
-    let uniqueUrls = [];
 
     useEffect(() => {
         fetch('https://api.github.com/users/jonathancmaia/repos')
         .then((response) => response.json())
-        .then((json) => setResponse(json));
+        .then((json) => {
+
+            let uniqueUrls = [];
+
+            json.map((p, i)=>{
+                if(!uniqueUrls.includes(p.homepage)){
+                    uniqueUrls.push(p.homepage);
+                    json[i].homepage = [{homepage: p.homepage, full_name: p.full_name, name: p.name}];
+                } else {
+                    let pIndex = uniqueUrls.indexOf(p.homepage);
+                    json[pIndex].homepage = [...json[pIndex].homepage, {homepage: p.homepage, full_name: p.full_name, name: p.name}];
+                }
+            });
+
+            setResponse(json);
+        });
     },[]);
 
 
@@ -23,26 +37,22 @@ const Section4 = () => {
                         {response.map((p, i) => 
                             {
                                 //Verify if a project has 2 repositories
-                                if (p.homepage && !uniqueUrls[p.homepage]) {
-
-                                    uniqueUrls[p.homepage] = {
-                                            repositories: [{
-                                            name: p.name,
-                                            fullName: p.full_name
-                                        }]
-                                    };
+                                if (p.homepage[0].homepage) {
 
                                     return (
                                         <div className="project" key={i}>
                                             <img src={
-                                                'https://api.microlink.io/?url='+p.homepage+'&screenshot=true&embed=screenshot.url&waitForTiemout=3s'
+                                                'https://api.microlink.io/?url='+p.homepage[0].homepage+'&screenshot=true&embed=screenshot.url&waitForTiemout=3s'
                                             } alt={p.name} />
 
-                                            <h2 id={p.homepage}>
-                                                <a href={"https://github.com/"+p.full_name} target="_blank" rel="noreferrer" className="rgb" data={p.name+' * '}>
-                                                    {p.name} <i className="bi bi-box-arrow-up-right"></i>
-                                                </a>
-                                            </h2>
+                                            {p.homepage.map((link, i)=>(
+                                                <h2 key={i}>
+                                                    <a href={"https://github.com/"+link.full_name} target="_blank" rel="noreferrer" className="rgb" data={link.name+' * '}>
+                                                        {link.name} <i className="bi bi-box-arrow-up-right"></i>
+                                                    </a>
+                                                </h2>
+                                            ))}
+                                            
                                             <p>{p.description}</p>
                                             <h3>
                                                 <a
@@ -57,27 +67,6 @@ const Section4 = () => {
                                             </h3>
                                         </div>
                                     );
-
-                                //if a project has 2 repositories just create a link and push this into projects card
-                                } else if (p.homepage) {
-                                    const a = document.createElement("a");
-                                    a.setAttribute("href", "https://github.com/"+p.full_name);
-                                    a.setAttribute("target", "_blank");
-                                    a.setAttribute("rel", "noreferrer");
-                                    a.setAttribute("class", "rgb");
-                                    a.setAttribute("data", p.name+' * ');
-                                    a.setAttribute("id", p.full_name);
-                                    const aText = document.createTextNode(p.name+" ");
-                                    
-                                    const icon = document.createElement("i");
-                                    icon.setAttribute("class", "bi bi-box-arrow-up-right");
-
-                                    a.appendChild(aText);
-                                    a.appendChild(icon);
-
-                                    if (document.getElementById(p.homepage) !== null && !document.getElementById(p.full_name)) {
-                                        document.getElementById(p.homepage).appendChild(a);
-                                    }
                                 }
                             }
                         )}
