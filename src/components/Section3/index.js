@@ -30,23 +30,41 @@ const Section3 = () => {
 
     function startDrag(event) {
         const habilitiesHandler = document.getElementById('habilitiesHandler');
-        if (event.button === 0 && !dragging) {
+        
+        if (event.button === 0 && !dragging || event.type === 'touchstart' && !dragging) {
             dragging = true;
-            start = event.pageX;
+
+            //verify if is click or touch
+            if(event.type === 'touchstart'){
+                start = event.targetTouches[0].pageX;
+            } else {
+                start = event.pageX;
+            }
+
             scrollLeft = habilitiesHandler.scrollLeft;
+        }
+    }
+
+    function drag(event) {
+        const habilitiesHandler = document.getElementById('habilitiesHandler');
+
+        if (dragging) {
+
+            var scroll;
+
+            //verify if is click or touch
+            if(event.type === 'touchmove'){
+                scroll = start - event.targetTouches[0].pageX;
+            } else {
+                scroll = start - event.pageX;
+            }
+            
+            habilitiesHandler.scrollLeft = scrollLeft + scroll;
         }
     }
 
     function stopDrag() {
         dragging = false;
-    }
-
-    function drag(event) {
-        const habilitiesHandler = document.getElementById('habilitiesHandler');
-        if (dragging) {
-            var scroll = start - event.pageX;
-            habilitiesHandler.scrollLeft = scrollLeft + scroll;
-        }
     }
 
     return (
@@ -59,9 +77,13 @@ const Section3 = () => {
                 Principais ferramentas
             </h3>
             <div>
-                <i className="bi bi-arrow-left-square rgb" id="buttonLeft" data="rgb"
+                <i
+                    className="bi bi-arrow-left-square rgb"
+                    id="buttonLeft"
+                    data="rgb"
+
                     onClick={(e)=>{
-                        rollCarousel('left')
+                        rollCarousel('left');
                     }}
 
                     onMouseDown={(e)=>{
@@ -73,7 +95,14 @@ const Section3 = () => {
                             clearInterval(interval)
                     }}
                 ></i>
-                <div id="habilitiesHandler" onMouseDown={(e)=>startDrag(e)} onMouseUp={(e)=>stopDrag(e)} onMouseMove={(e)=>{drag(e)}}>
+                <div id="habilitiesHandler"
+                    onMouseDown={(e)=>startDrag(e)}
+                    onMouseUp={(e)=>stopDrag(e)}
+                    onMouseMove={(e)=>drag(e)}
+                    onTouchStart={(e) => startDrag(e)}
+                    onTouchEnd={(e) => stopDrag(e)}
+                    onTouchMove={(e) => drag(e)}
+                >
                     <motion.div
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
