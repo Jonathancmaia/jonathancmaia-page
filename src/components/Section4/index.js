@@ -1,4 +1,5 @@
-import {useState, useEffect, createElement} from 'react';
+import {useState, useEffect} from 'react';
+import { motion } from "framer-motion";
 import './style.css';
 
 const Section4 = () => {
@@ -27,8 +28,12 @@ const Section4 = () => {
 
 
     return (
-        <section id="section4">
-            <h3>
+        <motion.section
+            id="section4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 , transition: { duration: 1.5}}}
+        >
+            <h3 className="title" data="Projetos">
                 Projetos
             </h3>
             <div>
@@ -77,7 +82,7 @@ const Section4 = () => {
                     </div>
                 }
             </div>
-        </section>
+        </motion.section>
     );
 }
 

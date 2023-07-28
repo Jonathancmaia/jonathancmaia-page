@@ -5,7 +5,7 @@ const Section1 = ()=>{
         <section id="section1">
             <h1>
                 Desenvolvedor
-                <div className="rgb-active" data="FULLSTACK" blur="150">
+                <div className="rgb-active" data="FULLSTACK">
                     FULLSTACK
                 </div>
             </h1>

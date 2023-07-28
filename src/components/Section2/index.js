@@ -8,7 +8,7 @@ const Section2 = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 , transition: { duration: 1.5}}}
         >
-            <h3>
+            <h3 className="title" data="Sobre mim">
                 Sobre mim
             </h3>
             <p>

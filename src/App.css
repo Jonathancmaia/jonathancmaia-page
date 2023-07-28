@@ -13,8 +13,32 @@ a {
   color: inherit;
 }
 
-section {
-  padding: 1rem;
+.title{
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 766px){
+  section {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 767px){
+  section {
+    padding: 1rem 4rem 1rem 4rem;
+  }
+}
+
+@media screen and (min-width: 992px){
+  section {
+    padding: 1rem 8rem 1rem 8rem;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  section {
+    padding: 1rem 12rem 1rem 12rem;
+  }
 }
 
 /* RGB ANIMATIONS */

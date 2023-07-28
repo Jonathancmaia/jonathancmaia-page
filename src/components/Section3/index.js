@@ -73,7 +73,7 @@ const Section3 = () => {
             whileInView={{ opacity: 1 , transition: { duration: 1.5}}}
             id="section3"
         >
-            <h3>
+            <h3 className="title" data="Principais ferramentas">
                 Principais ferramentas
             </h3>
             <div>

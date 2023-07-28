@@ -1,4 +1,5 @@
 import './App.css';
+import Line from './components/Line';
 import Header from './components/Header';
 import Section1 from './components/Section1';
 import Section2 from './components/Section2';
@@ -9,6 +10,7 @@ import Section5 from './components/Section5';
 function App() {
   return (
     <div className="App">
+      <Line />
       <Header />
       <Section1 />
       <Section2 />

@@ -1,0 +1,180 @@
+#line{
+    position: fixed;
+    animation: rgbMoviment 10s linear infinite;
+    background-size: 100vw auto;
+    transition: 0.5s;
+    width: 0.25rem;
+    height: 0%;
+    margin: 0% 0% 0% 5%;
+}
+
+#lineBright{
+  filter: blur(1rem);
+  position: fixed;
+  animation: rgbMoviment 10s linear infinite;
+  background-size: 100vw auto;
+  transition: 0.5s;
+  width: 0.25rem;
+  height: 0%;
+  margin: 0% 0% 0% 5%;
+}
+
+.preTitle{
+  height: 0.2rem;
+  position: absolute;
+  left: 5vw;
+  margin-top: -1rem;
+  animation: preTitleExpand 0.5s ease-out 0.5s forwards, rgbMoviment 10s linear infinite;
+  -webkit-animation: preTitleExpand 0.5s ease-out 0.5s forwards, rgbMoviment 10s linear infinite;
+  background-size: 300vw auto;
+  transition: transform 0.25s;
+}
+
+.closeLine{
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.preTitleBright{
+  filter: blur(0.5rem);
+  height: 0.1rem;
+  position: absolute;
+  left: 5vw;
+  margin-top: -1rem;
+  animation: preTitleExpand 0.5s ease-out 0.5s forwards, rgbMoviment 10s linear infinite;
+  -webkit-animation: preTitleExpand 0.5s ease-out 0.5s forwards, rgbMoviment 10s linear infinite;
+  background-size: 300vw auto;
+  z-index: -1;
+  transition: transform 0.25s;
+}
+
+.icon{
+  position: absolute;
+  background-color: var(--base-color);
+  border-radius: 50%;
+  margin-top: -3rem;
+  left: calc(5vw - 2.25rem);
+  border: 0.25rem solid #FFF;
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  background-position: center center;
+  transition: transform 0.25s ease-in-out 0.5s;
+  animation: scale-in-center 0.5s ease-out forwards;
+  display: flex;
+  justify-content: center;
+}
+
+.closeIcon{
+  transform: scale(0);
+  transform-origin: top left;
+}
+
+#icon0 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>');
+}
+
+#icon1 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-wrench-adjustable" viewBox="0 0 16 16"><path d="M16 4.5a4.492 4.492 0 0 1-1.703 3.526L13 5l2.959-1.11c.027.2.041.403.041.61Z"/><path d="M11.5 9c.653 0 1.273-.139 1.833-.39L12 5.5 11 3l3.826-1.53A4.5 4.5 0 0 0 7.29 6.092l-6.116 5.096a2.583 2.583 0 1 0 3.638 3.638L9.908 8.71A4.49 4.49 0 0 0 11.5 9Zm-1.292-4.361-.596.893.809-.27a.25.25 0 0 1 .287.377l-.596.893.809-.27.158.475-1.5.5a.25.25 0 0 1-.287-.376l.596-.893-.809.27a.25.25 0 0 1-.287-.377l.596-.893-.809.27-.158-.475 1.5-.5a.25.25 0 0 1 .287.376ZM3 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');
+}
+
+#icon2 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-file-earmark-code-fill" viewBox="0 0 16 16"><path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM6.646 7.646a.5.5 0 1 1 .708.708L5.707 10l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 10 8.646 8.354a.5.5 0 1 1 .708-.708z"/></svg>');
+}
+
+#icon3 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-phone-fill" viewBox="0 0 16 16"><path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/></svg>');
+}
+
+@media screen and (max-width: 767px) {
+    #line, #lineBright{
+        display: none;
+    }
+
+}
+
+@-webkit-keyframes scale-in-center {
+  from {
+    height: 0rem;
+    width: 0rem;
+  } to {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+@keyframes scale-in-center {
+  from {
+    height: 0rem;
+    width: 0rem;
+  } to {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+
+@keyframes preTitleExpand {
+  from {
+    width: 0%;
+  } to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes preTitleExpand {
+  from {
+    width: 0%;
+  } to {
+    width: 100%;
+  }
+}
+
+@keyframes rgbMoviment {
+    from {
+      background-image: linear-gradient(
+        to right,
+        blue 0%,
+        green 25%,
+        red 50%,
+        green 75%,
+        blue 100%
+      );
+      background-position: 300% 0;
+    }
+    to {
+      background-image: linear-gradient(
+        to right,
+        blue 0%,
+        green 25%,
+        red 50%,
+        green 75%,
+        blue 100%
+      );
+      background-position: 0 0;
+  }
+}
+
+@-webkit-keyframes rgbMoviment {
+  from {
+    background-image: linear-gradient(
+      to right,
+      blue 0%,
+      green 25%,
+      red 50%,
+      green 75%,
+      blue 100%
+    );
+    background-position: 300% 0;
+  }
+  to {
+    background-image: linear-gradient(
+      to right,
+      blue 0%,
+      green 25%,
+      red 50%,
+      green 75%,
+      blue 100%
+    );
+    background-position: 0 0;
+}
+}
