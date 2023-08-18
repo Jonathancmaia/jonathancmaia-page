@@ -6,7 +6,7 @@ const Section4 = () => {
   const [response, setResponse] = useState(false);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/jonathancmaia/repos")
+    fetch("https://api.github.com/users/jonathancmaia/repos?type=all")
       .then((response) => response.json())
       .then((json) => {
         let uniqueUrls = [];
