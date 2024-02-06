@@ -26,6 +26,8 @@ const Section4 = () => {
           }
         });
 
+        console.log(uniqueUrls);
+
         setResponse(json);
       });
   }, []);
@@ -44,7 +46,7 @@ const Section4 = () => {
           <div className="projectsHandler">
             {response.map((p, i) => {
               //Verify if a project has 2 repositories
-              if (p.homepage[0].homepage) {
+              if (p.homepage != null && p.homepage[0].homepage) {
                 return (
                   <div className="project" key={i}>
                     <img
