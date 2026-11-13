@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/jonathancmaia-page/static/css/main.6c86b0a4.css",
-    "main.js": "/jonathancmaia-page/static/js/main.eadbe41e.js",
-    "static/js/592.b4cb3bd6.chunk.js": "/jonathancmaia-page/static/js/592.b4cb3bd6.chunk.js",
+    "main.css": "/jonathancmaia-page/static/css/main.bdffc51c.css",
+    "main.js": "/jonathancmaia-page/static/js/main.b8e465f4.js",
+    "static/js/453.616f17e1.chunk.js": "/jonathancmaia-page/static/js/453.616f17e1.chunk.js",
     "index.html": "/jonathancmaia-page/index.html",
-    "main.6c86b0a4.css.map": "/jonathancmaia-page/static/css/main.6c86b0a4.css.map",
-    "main.eadbe41e.js.map": "/jonathancmaia-page/static/js/main.eadbe41e.js.map",
-    "592.b4cb3bd6.chunk.js.map": "/jonathancmaia-page/static/js/592.b4cb3bd6.chunk.js.map"
+    "main.bdffc51c.css.map": "/jonathancmaia-page/static/css/main.bdffc51c.css.map",
+    "main.b8e465f4.js.map": "/jonathancmaia-page/static/js/main.b8e465f4.js.map",
+    "453.616f17e1.chunk.js.map": "/jonathancmaia-page/static/js/453.616f17e1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c86b0a4.css",
-    "static/js/main.eadbe41e.js"
+    "static/css/main.bdffc51c.css",
+    "static/js/main.b8e465f4.js"
   ]
 }
