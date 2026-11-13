@@ -76,6 +76,11 @@ a {
   transition: 0.4s;
 }
 
+i.rgb::after,
+i.rgb-active::after {
+  content: none;
+}
+
 @keyframes rgbMoviment {
   from {
     background-image: linear-gradient(
